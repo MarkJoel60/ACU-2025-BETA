@@ -1,0 +1,38 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.PM.GraphExtensions.ProgressWorksheetApprovalMapMaintExt
+// Assembly: PX.Objects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: CF76B6BF-0C8A-413D-8225-C21BEAE6CEEC
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.xml
+
+using PX.Data;
+using PX.Objects.CS;
+using PX.Objects.EP;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+#nullable disable
+namespace PX.Objects.PM.GraphExtensions;
+
+public class ProgressWorksheetApprovalMapMaintExt : PXGraphExtension<EPApprovalMapMaint>
+{
+  private static IEnumerable<string> Screens
+  {
+    get
+    {
+      return (IEnumerable<string>) new List<string>()
+      {
+        "PM303000"
+      };
+    }
+  }
+
+  public static bool IsActive() => PXAccess.FeatureInstalled<FeaturesSet.construction>();
+
+  [PXOverride]
+  public IEnumerable<string> GetEntityTypeScreens(Func<IEnumerable<string>> baseMethod)
+  {
+    return baseMethod().Concat<string>(ProgressWorksheetApprovalMapMaintExt.Screens);
+  }
+}

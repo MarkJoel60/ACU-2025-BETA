@@ -1,0 +1,27 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.FS.DAC.ReportParameters.FSStaffMemberReportParameters
+// Assembly: PX.Objects.FS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 6B78C88F-1039-47BB-84A6-5486C1B99824
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.FS.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.FS.xml
+
+using PX.Data;
+using PX.Data.BQL;
+
+#nullable enable
+namespace PX.Objects.FS.DAC.ReportParameters;
+
+public class FSStaffMemberReportParameters : PXBqlTable, IBqlTable, IBqlTableSystemDataStorage
+{
+  [PXInt]
+  [FSSelector_StaffMember_ServiceOrderProjectID]
+  [PXUIField(DisplayName = "Staff Member", TabOrder = 0)]
+  public virtual int? EmployeeID { get; set; }
+
+  public abstract class employeeID : 
+    BqlType<IBqlInt, int>.Field<
+    #nullable disable
+    FSStaffMemberReportParameters.employeeID>
+  {
+  }
+}

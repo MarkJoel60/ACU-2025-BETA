@@ -1,0 +1,22 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Data.Maintenance.SM.SendRecurringNotifications.AUReportProcessExtension
+// Assembly: PX.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 2A82D21C-DAFC-4371-ACE9-BAD417AC5A62
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Data.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Data.xml
+
+using PX.SM;
+using System;
+
+#nullable disable
+namespace PX.Data.Maintenance.SM.SendRecurringNotifications;
+
+public class AUReportProcessExtension : PXGraphExtension<AUReportProcess>
+{
+  public virtual void _(Events.RowSelected<AUReportProcess.Parameters> e, PXRowSelected baseHandler)
+  {
+    baseHandler(e.Cache, e.Args);
+    PXSetPropertyException propertyException = new PXSetPropertyException((IBqlTable) e.Row, "This form will be deprecated in the next release. To avoid interruptions in report sending, use the Migrate button on the Automation Schedule (SM205020) form to migrate your automation schedules. This process will create an email template for each report template in the schedule and link it to a new schedule.", PXErrorLevel.RowWarning);
+    e.Cache.RaiseExceptionHandling<AUReportProcess.Parameters.reportID>((object) e.Row, (object) null, (Exception) propertyException);
+  }
+}

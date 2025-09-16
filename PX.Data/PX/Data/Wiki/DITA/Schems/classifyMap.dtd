@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                        Acumatica Inc.                         -->
+<!--          Copyright (c) 1994-2011 All rights reserved.         -->
+<!--                                                               -->
+<!--                                                               -->
+<!-- This file and its contents are protected by United States     -->
+<!-- and International copyright laws.  Unauthorized reproduction  -->
+<!-- and/or distribution of all or any portion of the code         -->
+<!-- contained here in is strictly prohibited and will result in   -->
+<!-- severe civil and criminal penalties.                          -->
+<!-- Any violations of this copyright will be prosecuted       	   -->
+<!-- to the fullest extent possible under law.                     -->
+<!--                                                               -->
+<!-- UNDER NO CIRCUMSTANCES MAY THE SOURCE CODE BE USED IN WHOLE   -->
+<!-- OR IN PART, AS THE BASIS FOR CREATING A PRODUCT THAT PROVIDES -->
+<!-- THE SAME, OR SUBSTANTIALLY THE SAME, FUNCTIONALITY AS ANY     -->
+<!-- ProjectX PRODUCT.                                             -->
+<!-- THIS COPYRIGHT NOTICE MAY NOT BE REMOVED FROM THIS FILE.      -->
+<!-- ============================================================= -->
+
+
+<!ENTITY % mapgroup-d-dec 
+  SYSTEM "../../base/dtd/mapGroup.ent"                                                       
+>%mapgroup-d-dec;
+
+<!ENTITY % indexing-d-dec     
+  SYSTEM "../../base/dtd/indexingDomain.ent"                                                 
+>%indexing-d-dec;
+
+<!ENTITY % delay-d-dec     
+  SYSTEM "../../base/dtd/delayResolutionDomain.ent"                                                       
+>%delay-d-dec;
+
+<!ENTITY % classify-d-dec     
+  SYSTEM "classifyDomain.ent"                                                       
+>%classify-d-dec;
+
+<!ENTITY % hi-d-dec     
+  SYSTEM "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec     
+  SYSTEM "../../base/dtd/utilitiesDomain.ent"                                                
+>%ut-d-dec;
+
+<!ENTITY % hazard-d-dec     
+  SYSTEM "../../base/dtd/hazardstatementDomain.ent"
+>%hazard-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % keywords     "keywords | 
+                         %delay-d-keywords;
+                        ">
+<!ENTITY % topicref     "topicref |
+                         (%classify-d-topicref;) | 
+                         (%mapgroup-d-topicref;)
+                        ">
+<!ENTITY % reltable     "reltable |
+                         (%classify-d-reltable;)
+                        ">
+<!ENTITY % index-base   "index-base | 
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph;
+                        ">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig;
+                        ">
+<!ENTITY % note         "note | 
+                         %hazard-d-note;
+                        ">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  
+  ""
+>
+<!ENTITY % base-attribute-extensions   
+  ""
+>
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                        "&delay-d-att;
+                         &mapgroup-d-att; 
+                         &indexing-d-att;
+                         &classify-d-att;
+                         &hi-d-att; 
+                         &ut-d-att; 
+                         &hazard-d-att;
+                        ">
+
+<!-- ============================================================= -->
+<!--                    MAP ELEMENT INTEGRATION                    -->
+<!-- ============================================================= -->
+
+
+<!--                    Embed map to get generic elements          -->
+<!ENTITY % map-type     
+  SYSTEM "../../base/dtd/map.mod"                                                            
+>%map-type;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+
+<!ENTITY % mapgroup-d-def  
+  SYSTEM "../../base/dtd/mapGroup.mod"                                                       
+>%mapgroup-d-def;
+
+<!ENTITY % indexing-d-def     
+  SYSTEM "../../base/dtd/indexingDomain.mod"                                                 
+>%indexing-d-def;
+
+<!ENTITY % delay-d-def     
+  SYSTEM "../../base/dtd/delayResolutionDomain.mod"
+>%delay-d-def;
+
+<!ENTITY % classify-d-def     
+  SYSTEM "classifyDomain.mod"                                                       
+>%classify-d-def;
+
+<!ENTITY % hi-d-def     
+  SYSTEM "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def     
+  SYSTEM "../../base/dtd/utilitiesDomain.mod"
+>%ut-d-def;
+
+<!ENTITY % hazard-d-def     
+  SYSTEM "../../base/dtd/hazardstatementDomain.mod"
+>%hazard-d-def;
+
+<!-- ================== End DITA Classification Map DTD  ========= -->

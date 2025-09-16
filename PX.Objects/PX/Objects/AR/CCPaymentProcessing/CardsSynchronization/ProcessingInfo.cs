@@ -1,0 +1,55 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.AR.CCPaymentProcessing.CardsSynchronization.ProcessingInfo
+// Assembly: PX.Objects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: CF76B6BF-0C8A-413D-8225-C21BEAE6CEEC
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.xml
+
+using PX.Data;
+using System;
+using System.Collections.Generic;
+
+#nullable disable
+namespace PX.Objects.AR.CCPaymentProcessing.CardsSynchronization;
+
+internal class ProcessingInfo
+{
+  public const string processingKey = "PXCCProcessingState";
+
+  public static void AppendProcessingInfo(Guid noteId, string info)
+  {
+    if (!(PXLongOperation.GetCustomInfoForCurrentThread("PXCCProcessingState") is List<SyncCCProcessingInfoEntry> forCurrentThread))
+      return;
+    PXProcessingMessage processingMessage = new PXProcessingMessage()
+    {
+      ErrorLevel = (PXErrorLevel) 1,
+      Message = info
+    };
+    forCurrentThread.Add(new SyncCCProcessingInfoEntry()
+    {
+      NoteId = noteId,
+      ProcessingMessage = processingMessage
+    });
+  }
+
+  public static void AppendProcessingError(Guid noteId, string error)
+  {
+    if (!(PXLongOperation.GetCustomInfoForCurrentThread("PXCCProcessingState") is List<SyncCCProcessingInfoEntry> forCurrentThread))
+      return;
+    PXProcessingMessage processingMessage = new PXProcessingMessage()
+    {
+      ErrorLevel = (PXErrorLevel) 5,
+      Message = error
+    };
+    forCurrentThread.Add(new SyncCCProcessingInfoEntry()
+    {
+      NoteId = noteId,
+      ProcessingMessage = processingMessage
+    });
+  }
+
+  public static void ClearProcessingRows()
+  {
+    (PXLongOperation.GetCustomInfoForCurrentThread("PXCCProcessingState") as List<SyncCCProcessingInfoEntry>).Clear();
+  }
+}

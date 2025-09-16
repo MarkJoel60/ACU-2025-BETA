@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\tmp\2025 R2 DLLs\PX.Data.BQL.Dynamic.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{685ABB2C-BBCD-4B55-B419-77D056AF962C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PX.Data.BQL.Dynamic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>PX.Data.BQL.Dynamic</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PX.Common">
+      <HintPath>lib\PX.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BqlBuilder.cs" />
+    <Compile Include="ParameterMap.cs" />
+    <Compile Include="BqlCommandExecutor.cs" />
+    <Compile Include="Statements\AggregateStatement.cs" />
+    <Compile Include="Statements\BinaryStatement.cs" />
+    <Compile Include="Statements\ChainedAggregateStatement.cs" />
+    <Compile Include="Statements\AggregateType.cs" />
+    <Compile Include="Statements\CompareStatement.cs" />
+    <Compile Include="Statements\CompareType.cs" />
+    <Compile Include="Statements\ConstantStatement.cs" />
+    <Compile Include="Statements\FieldAggregateStatement.cs" />
+    <Compile Include="Statements\FieldSortStatement.cs" />
+    <Compile Include="Statements\FieldStatement.cs" />
+    <Compile Include="Statements\IStatement.cs" />
+    <Compile Include="Statements\IChainedStatement.cs" />
+    <Compile Include="Statements\ChainedStatement.cs" />
+    <Compile Include="Statements\JoinStatement.cs" />
+    <Compile Include="Statements\JoinType.cs" />
+    <Compile Include="Statements\OnStatement.cs" />
+    <Compile Include="Statements\OperandAggregateStatement.cs" />
+    <Compile Include="Statements\OperandStatement.cs" />
+    <Compile Include="Statements\CustomOperand.cs" />
+    <Compile Include="Statements\OrderByStatement.cs" />
+    <Compile Include="Statements\ParameterStatement.cs" />
+    <Compile Include="Statements\ParameterType.cs" />
+    <Compile Include="Statements\SelectStatement.cs" />
+    <Compile Include="Statements\UnaryStatement.cs" />
+    <Compile Include="Statements\WhereStatement.cs" />
+    <Compile Include="Statements\BracketsStatement.cs" />
+    <Compile Include="Builders\AggregateBuilder.cs" />
+    <Compile Include="Builders\ConditionBuilder.cs" />
+    <Compile Include="Builders\JoinBuilder.cs" />
+    <Compile Include="Builders\OrderByBuilder.cs" />
+    <Compile Include="Builders\SelectBuilder.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

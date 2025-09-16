@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                        Acumatica Inc.                         -->
+<!--          Copyright (c) 1994-2011 All rights reserved.         -->
+<!--                                                               -->
+<!--                                                               -->
+<!-- This file and its contents are protected by United States     -->
+<!-- and International copyright laws.  Unauthorized reproduction  -->
+<!-- and/or distribution of all or any portion of the code         -->
+<!-- contained here in is strictly prohibited and will result in   -->
+<!-- severe civil and criminal penalties.                          -->
+<!-- Any violations of this copyright will be prosecuted       	   -->
+<!-- to the fullest extent possible under law.                     -->
+<!--                                                               -->
+<!-- UNDER NO CIRCUMSTANCES MAY THE SOURCE CODE BE USED IN WHOLE   -->
+<!-- OR IN PART, AS THE BASIS FOR CREATING A PRODUCT THAT PROVIDES -->
+<!-- THE SAME, OR SUBSTANTIALLY THE SAME, FUNCTIONALITY AS ANY     -->
+<!-- ProjectX PRODUCT.                                             -->
+<!-- THIS COPYRIGHT NOTICE MAY NOT BE REMOVED FROM THIS FILE.      -->
+<!-- ============================================================= -->
+
+
+<!ENTITY % mapgroup-d-dec 
+  SYSTEM "mapGroup.ent"                                                       
+>%mapgroup-d-dec;
+
+<!ENTITY % indexing-d-dec     
+  SYSTEM "indexingDomain.ent"                                                 
+>%indexing-d-dec;
+
+<!ENTITY % delay-d-dec     
+  SYSTEM "delayResolutionDomain.ent"                                                       
+>%delay-d-dec;
+
+<!ENTITY % hi-d-dec     
+  SYSTEM "highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec     
+  SYSTEM "utilitiesDomain.ent"                                                
+>%ut-d-dec;
+
+<!ENTITY % hazard-d-dec     
+  SYSTEM "hazardstatementDomain.ent"
+>%hazard-d-dec;
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % keywords     "keywords | 
+                         %delay-d-keywords;
+                        ">
+<!ENTITY % topicref     "topicref | 
+                         %mapgroup-d-topicref;
+                        ">
+<!ENTITY % index-base   "index-base | 
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % ph           "ph | 
+                         %hi-d-ph;
+                        ">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig;
+                        ">
+<!ENTITY % note         "note | 
+                         %hazard-d-note;
+                        ">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  
+  ""
+>
+<!ENTITY % base-attribute-extensions   
+  ""
+>
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                        "&delay-d-att;
+                         &mapgroup-d-att; 
+                         &indexing-d-att;
+                         &hi-d-att; 
+                         &ut-d-att; 
+                         &hazard-d-att;">
+
+<!-- ============================================================= -->
+<!--                    MAP ELEMENT INTEGRATION                    -->
+<!-- ============================================================= -->
+
+
+<!--                    Embed map to get generic elements          -->
+<!--    2005.11.15 RDA: Corrected SYSTEM ID for map.mod. It was    -->
+<!--             "-//OASIS//Elements DITA Map Group Domain//EN"    -->
+<!ENTITY % map-type     
+  SYSTEM "map.mod"                                                            
+>%map-type;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+
+<!ENTITY % mapgroup-d-def  
+  SYSTEM "mapGroup.mod"                                                       
+>%mapgroup-d-def;
+
+<!ENTITY % indexing-d-def     
+  SYSTEM "indexingDomain.mod"                                                 
+>%indexing-d-def;
+
+<!ENTITY % delay-d-def     
+  SYSTEM "delayResolutionDomain.mod"
+>%delay-d-def;
+
+<!ENTITY % hi-d-def     
+  SYSTEM "highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def     
+  SYSTEM "utilitiesDomain.mod"
+>%ut-d-def;
+
+<!ENTITY % hazard-d-def     
+  SYSTEM "hazardstatementDomain.mod"
+>%hazard-d-def;
+
+<!-- ================== End DITA Map DTD  ======================== -->

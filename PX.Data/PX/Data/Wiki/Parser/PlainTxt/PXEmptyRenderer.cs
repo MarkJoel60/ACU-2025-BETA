@@ -1,0 +1,22 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Data.Wiki.Parser.PlainTxt.PXEmptyRenderer
+// Assembly: PX.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 2A82D21C-DAFC-4371-ACE9-BAD417AC5A62
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Data.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Data.xml
+
+using System;
+
+#nullable disable
+namespace PX.Data.Wiki.Parser.PlainTxt;
+
+/// <summary>
+/// Represents a class for PXEmptySpaceElement txt rendering.
+/// </summary>
+internal class PXEmptyRenderer : PXTxtRenderer
+{
+  protected override void Render(PXElement elem, PXTxtRenderContext resultTxt)
+  {
+    resultTxt.Append(Environment.NewLine);
+  }
+}

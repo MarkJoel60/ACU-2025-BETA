@@ -1,0 +1,36 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.CS.Email.PXSyncItemID
+// Assembly: PX.Objects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: CF76B6BF-0C8A-413D-8225-C21BEAE6CEEC
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.xml
+
+using System;
+
+#nullable disable
+namespace PX.Objects.CS.Email;
+
+public class PXSyncItemID
+{
+  public readonly string Address;
+  public readonly string ItemID;
+  public readonly Guid? NoteID;
+
+  public PXSyncItemID(string address, string itemID, Guid? noteID)
+  {
+    this.Address = address;
+    this.ItemID = itemID;
+    this.NoteID = noteID;
+  }
+
+  public override int GetHashCode() => this.ItemID.GetHashCode();
+
+  public override bool Equals(object obj)
+  {
+    return obj != null && obj is PXSyncItemID && string.Equals(this.ItemID, ((PXSyncItemID) obj).ItemID);
+  }
+
+  public override string ToString() => this.ItemID;
+
+  public virtual bool NeedProcess() => false;
+}

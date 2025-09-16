@@ -1,0 +1,24 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.SM.Email.EmailAccountsToShowOptions
+// Assembly: PX.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 2A82D21C-DAFC-4371-ACE9-BAD417AC5A62
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Data.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Data.xml
+
+#nullable disable
+namespace PX.SM.Email;
+
+/// <summary>
+/// Defines restriction for the <see cref="T:PX.SM.Email.EmailAccountRawAttribute">EmailAccountRawAttribute</see> attribute selector.
+/// </summary>
+public enum EmailAccountsToShowOptions
+{
+  /// <summary>All Email Account</summary>
+  All,
+  /// <summary>Only My Personal Email Accounts</summary>
+  OnlyMine,
+  /// <summary>Only System Email Account</summary>
+  OnlySystem,
+  /// <summary>Only My Personal and System Email Accounts</summary>
+  MineAndSystem,
+}

@@ -1,0 +1,67 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Data.Update.ExchangeService.DistributionListType
+// Assembly: PX.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 2A82D21C-DAFC-4371-ACE9-BAD417AC5A62
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Data.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Data.xml
+
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+#nullable disable
+namespace PX.Data.Update.ExchangeService;
+
+/// <remarks />
+[GeneratedCode("System.Xml", "4.0.30319.18408")]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://schemas.microsoft.com/exchange/services/2006/types")]
+[Serializable]
+public class DistributionListType : ItemType
+{
+  private string displayNameField;
+  private string fileAsField;
+  private ContactSourceType contactSourceField;
+  private bool contactSourceFieldSpecified;
+  private MemberType[] membersField;
+
+  /// <remarks />
+  public string DisplayName
+  {
+    get => this.displayNameField;
+    set => this.displayNameField = value;
+  }
+
+  /// <remarks />
+  public string FileAs
+  {
+    get => this.fileAsField;
+    set => this.fileAsField = value;
+  }
+
+  /// <remarks />
+  public ContactSourceType ContactSource
+  {
+    get => this.contactSourceField;
+    set => this.contactSourceField = value;
+  }
+
+  /// <remarks />
+  [XmlIgnore]
+  public bool ContactSourceSpecified
+  {
+    get => this.contactSourceFieldSpecified;
+    set => this.contactSourceFieldSpecified = value;
+  }
+
+  /// <remarks />
+  [XmlArrayItem("Member", IsNullable = false)]
+  public MemberType[] Members
+  {
+    get => this.membersField;
+    set => this.membersField = value;
+  }
+}

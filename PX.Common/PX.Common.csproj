@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\tmp\2025 R2 DLLs\PX.Common.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F22552B1-E354-45EE-98C5-DE4F84F85E0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PX.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>PX</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpRequestEx.cs" />
+    <Compile Include="Microsoft\Extensions\Configuration\ConfigurationBuilderExtensions.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+    <Compile Include="System\Web\Compilation\PXBuildManager.cs" />
+    <Compile Include="Common\Async.cs" />
+    <Compile Include="Common\AtomicLazy`1.cs" />
+    <Compile Include="Common\BinaryReaderEx.cs" />
+    <Compile Include="Common\CommonSurrogate.cs" />
+    <Compile Include="Common\CurrentLocalization.cs" />
+    <Compile Include="Common\DaylightSavingTime.cs" />
+    <Compile Include="Common\Func.cs" />
+    <Compile Include="Common\HtmlEntensions.cs" />
+    <Compile Include="Common\HttpContextExtensions.cs" />
+    <Compile Include="Common\IExtends`1.cs" />
+    <Compile Include="Common\IImplement`1.cs" />
+    <Compile Include="Common\IPXCompanyDependent.cs" />
+    <Compile Include="Common\IPXIdentity.cs" />
+    <Compile Include="Common\IPXIdentityAccessor.cs" />
+    <Compile Include="Common\ISessionContextFactory.cs" />
+    <Compile Include="Common\ISessionContextFactoryAdapter.cs" />
+    <Compile Include="Common\ISessionContextFactory`1.cs" />
+    <Compile Include="Common\ISourceControlPlugin.cs" />
+    <Compile Include="Common\ITimeRegion.cs" />
+    <Compile Include="Common\ITimeRegionProvider.cs" />
+    <Compile Include="Common\IndexerExtensions.cs" />
+    <Compile Include="Common\LocaleInfo.cs" />
+    <Compile Include="Common\PXBufferedResponse.cs" />
+    <Compile Include="Common\PXContext.cs" />
+    <Compile Include="Common\PXCultureScope.cs" />
+    <Compile Include="Common\PXExecutionContext.cs" />
+    <Compile Include="Common\PXHostingEnvironment.cs" />
+    <Compile Include="Common\PXInvariantCultureScope.cs" />
+    <Compile Include="Common\PXInvariantScope.cs" />
+    <Compile Include="Common\PXObjectComparer.cs" />
+    <Compile Include="Common\PXPageCacheUtils.cs" />
+    <Compile Include="Common\PXReflectionSerializer.cs" />
+    <Compile Include="Common\PXSerializationSurrogateAttribute.cs" />
+    <Compile Include="Common\PXSessionContext.cs" />
+    <Compile Include="Common\PXSessionContextAnonymous.cs" />
+    <Compile Include="Common\PXSessionContextFactory.cs" />
+    <Compile Include="Common\PXSessionState.cs" />
+    <Compile Include="Common\PXStackTrace.cs" />
+    <Compile Include="Common\PXSurrogateSelector.cs" />
+    <Compile Include="Common\PXTimeInfo.cs" />
+    <Compile Include="Common\PXTimeZoneInfo.cs" />
+    <Compile Include="Common\PXUrl.cs" />
+    <Compile Include="Common\PropertyTransfer.cs" />
+    <Compile Include="Common\PxObjectsIntern`1.cs" />
+    <Compile Include="Common\RequiredTypesAttribute.cs" />
+    <Compile Include="Common\SerializableDictionary`2.cs" />
+    <Compile Include="Common\ServiceCollectionExtensions.cs" />
+    <Compile Include="Common\SessionContextFactoryExtensions.cs" />
+    <Compile Include="Common\SingleCompanyIdExtensions.cs" />
+    <Compile Include="Common\SlotIndexer`2.cs" />
+    <Compile Include="Common\SourceControlPlugin.cs" />
+    <Compile Include="Common\SystemTimeRegion.cs" />
+    <Compile Include="Common\SystemTimeRegionProvider.cs" />
+    <Compile Include="Common\ThreadCop.cs" />
+    <Compile Include="Common\TimeZoneNames.cs" />
+    <Compile Include="Common\Tools.cs" />
+    <Compile Include="Common\UrlExtensions.cs" />
+    <Compile Include="Common\WebConfig.cs" />
+    <Compile Include="Common\WebsiteID.cs" />
+    <Compile Include="Common\XmlSurrogate.cs" />
+    <Compile Include="Common\Extensions\GuidExtensions.cs" />
+    <Compile Include="Common\Extensions\HttpResponseExtensions.cs" />
+    <Compile Include="Common\Mail\MailReceiver.cs" />
+    <Compile Include="Common\Mail\MailSender.cs" />
+    <Compile Include="Common\Mail\SmtpClientDefinition.cs" />
+    <Compile Include="Common\Parser\ExpressionContext.cs" />
+    <Compile Include="Common\Config\TSScreenInfoOptions.cs" />
+    <Compile Include="Common\Configuration\ConfigurationExtensions.cs" />
+    <Compile Include="Common\Context\AsyncLocalSlotStorageProvider.cs" />
+    <Compile Include="Common\Context\CallContextSlotStorageProvider.cs" />
+    <Compile Include="Common\Context\HttpContextSlotStorageProvider.cs" />
+    <Compile Include="Common\Context\IDisposableSlotStorageProvider.cs" />
+    <Compile Include="Common\Context\ISlotStorageProvider.cs" />
+    <Compile Include="Common\Context\SlotStorageProviderBase.cs" />
+    <Compile Include="Common\Context\SlotStorageProviderExtensions.cs" />
+    <Compile Include="Common\Context\SlotStore.cs" />
+    <Compile Include="Common\PdfPrinter\PdfPrinterConfigurationManager.cs" />
+    <Compile Include="Common\PdfPrinter\PrinterWinApiCommands.cs" />
+    <Compile Include="Common\Session\DictionarySessionState.cs" />
+    <Compile Include="Common\Session\HttpContextPXSessionState.cs" />
+    <Compile Include="Common\Session\IPXSessionState.cs" />
+    <Compile Include="Common\Session\IPXSessionStateExtensions.cs" />
+    <Compile Include="Common\Session\PXSessionStateTyped.cs" />
+    <Compile Include="Common\Session\SessionKey`1.cs" />
+    <Compile Include="Common\Session\SessionStandInExtensions.cs" />
+    <Compile Include="Common\Session\TypedExtensions.cs" />
+    <Compile Include="AspNetCore\HttpContextTranslation.cs" />
+    <Compile Include="AspNetCore\Owin\OwinContextExtensions.cs" />
+    <Compile Include="Logging\RequestTraceIdentifierExtensions.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

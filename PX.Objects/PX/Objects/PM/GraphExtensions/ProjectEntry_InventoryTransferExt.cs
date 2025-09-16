@@ -1,0 +1,31 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.PM.GraphExtensions.ProjectEntry_InventoryTransferExt
+// Assembly: PX.Objects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: CF76B6BF-0C8A-413D-8225-C21BEAE6CEEC
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.xml
+
+using PX.Data;
+using PX.Objects.CS;
+using System.Collections;
+
+#nullable disable
+namespace PX.Objects.PM.GraphExtensions;
+
+public class ProjectEntry_InventoryTransferExt : PXGraphExtension<ProjectEntry>
+{
+  public PXAction<PMProject> transferInventory;
+
+  public static bool IsActive() => PXAccess.FeatureInstalled<FeaturesSet.materialManagement>();
+
+  [PXUIField]
+  [PXButton]
+  public virtual IEnumerable TransferInventory(PXAdapter adapter)
+  {
+    ProjectInventoryTransferProcess instance = PXGraph.CreateInstance<ProjectInventoryTransferProcess>();
+    ProjectInventoryTransferFilter inventoryTransferFilter = ((PXSelectBase<ProjectInventoryTransferFilter>) instance.Filter).Insert();
+    inventoryTransferFilter.ProjectID = (int?) ((PXSelectBase<PMProject>) this.Base.Project).Current?.ProjectID;
+    inventoryTransferFilter.DisableProjectSelection = new bool?(true);
+    throw new PXRedirectRequiredException((PXGraph) instance, true, string.Empty);
+  }
+}

@@ -1,0 +1,40 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Objects.IN.InventoryRelease.Accumulators.Statistics.ItemCustomer.INItemCustSalesStatsAccumAttribute
+// Assembly: PX.Objects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: CF76B6BF-0C8A-413D-8225-C21BEAE6CEEC
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Objects.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Objects.xml
+
+using PX.Data;
+
+#nullable disable
+namespace PX.Objects.IN.InventoryRelease.Accumulators.Statistics.ItemCustomer;
+
+public abstract class INItemCustSalesStatsAccumAttribute : PXAccumulatorAttribute
+{
+  public INItemCustSalesStatsAccumAttribute() => this.SingleRecord = true;
+
+  protected virtual bool PrepareInsert(PXCache sender, object row, PXAccumulatorCollection columns)
+  {
+    if (!base.PrepareInsert(sender, row, columns))
+      return false;
+    this.PrepareInsertImpl((INItemCustSalesStats) row, columns);
+    return true;
+  }
+
+  protected abstract void PrepareInsertImpl(
+    INItemCustSalesStats stats,
+    PXAccumulatorCollection columns);
+
+  public virtual bool PersistInserted(PXCache sender, object row)
+  {
+    try
+    {
+      return base.PersistInserted(sender, row);
+    }
+    catch (PXLockViolationException ex)
+    {
+      return false;
+    }
+  }
+}

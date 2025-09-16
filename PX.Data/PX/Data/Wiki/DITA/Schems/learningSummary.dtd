@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================= -->
+<!--                        Acumatica Inc.                         -->
+<!--          Copyright (c) 1994-2011 All rights reserved.         -->
+<!--                                                               -->
+<!--                                                               -->
+<!-- This file and its contents are protected by United States     -->
+<!-- and International copyright laws.  Unauthorized reproduction  -->
+<!-- and/or distribution of all or any portion of the code         -->
+<!-- contained here in is strictly prohibited and will result in   -->
+<!-- severe civil and criminal penalties.                          -->
+<!-- Any violations of this copyright will be prosecuted       	   -->
+<!-- to the fullest extent possible under law.                     -->
+<!--                                                               -->
+<!-- UNDER NO CIRCUMSTANCES MAY THE SOURCE CODE BE USED IN WHOLE   -->
+<!-- OR IN PART, AS THE BASIS FOR CREATING A PRODUCT THAT PROVIDES -->
+<!-- THE SAME, OR SUBSTANTIALLY THE SAME, FUNCTIONALITY AS ANY     -->
+<!-- ProjectX PRODUCT.                                             -->
+<!-- THIS COPYRIGHT NOTICE MAY NOT BE REMOVED FROM THIS FILE.      -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    TOPIC ENTITY DECLARATIONS                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % learningBase-dec     
+  SYSTEM "learningBase.ent"
+>%learningBase-dec;
+
+<!ENTITY % learningSummary-dec     
+  SYSTEM "learningSummary.ent"
+>%learningSummary-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % learningInteractionBase-d-dec 
+  SYSTEM "learningInteractionBaseDomain.ent">
+  %learningInteractionBase-d-dec;
+
+<!ENTITY % learning-d-dec 
+  SYSTEM "learningDomain.ent">
+  %learning-d-dec;
+
+<!ENTITY % learningmeta-d-dec 
+  SYSTEM "learningMetadataDomain.ent">
+  %learningmeta-d-dec;
+
+<!ENTITY % hi-d-dec     
+  SYSTEM "../../base/dtd/highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec     
+  SYSTEM "../../base/dtd/utilitiesDomain.ent"                                                
+>%ut-d-dec;
+
+<!ENTITY % indexing-d-dec     
+  SYSTEM "../../base/dtd/indexingDomain.ent"                                                 
+>%indexing-d-dec;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % ph           "ph |
+                         %hi-d-ph;
+                        ">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig; |
+                         %learningInteractionBase-d-fig; |
+                         %learning-d-fig;
+                        ">
+<!ENTITY % lcInteractionBase "lcInteractionBase |
+                         %learning-d-lcInteractionBase;
+                        ">                        
+<!ENTITY % index-base   "index-base | 
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % note         "note | 
+                         %learning-d-note;
+                        ">
+<!ENTITY % metadata     "metadata |
+                         %learningmeta-d-metadata;
+                         ">
+
+<!-- ============================================================= -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ============================================================= -->
+
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+
+<!--Redefine the infotype entity to exclude other topic types and disallow nesting-->
+<!ENTITY % learningSummary-info-types "no-topic-nesting">
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                          "&hi-d-att; 
+                           &ut-d-att; 
+                           &indexing-d-att;
+                           &learningInteractionBase-d-att;
+                           &learning-d-att;
+                           &learningmeta-d-att; 
+                           &learningBase-att;
+                           &learningSummary-att; 
+  "
+>
+
+<!-- ============================================================= -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!--                    Embed topic to get generic elements        -->
+<!ENTITY % topic-type   SYSTEM 
+"../../base/dtd/topic.mod"                                                    >
+%topic-type;
+
+<!--Embed learningBase to get specific elements -->
+<!ENTITY % learningBase-typemod SYSTEM 
+"learningBase.mod">
+  %learningBase-typemod;
+
+<!--Embed learningSummary to get specific elements -->
+<!ENTITY % learningSummary-typemod SYSTEM 
+"learningSummary.mod">
+  %learningSummary-typemod;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-def     
+  SYSTEM "../../base/dtd/highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def     
+  SYSTEM "../../base/dtd/utilitiesDomain.mod"
+>%ut-d-def;
+
+<!ENTITY % indexing-d-def     
+  SYSTEM "../../base/dtd/indexingDomain.mod"
+>%indexing-d-def;
+
+<!ENTITY % learningInteractionBase-d-def
+  SYSTEM "learningInteractionBaseDomain.mod">
+  %learningInteractionBase-d-def;
+
+<!ENTITY % learning-d-def
+  SYSTEM "learningDomain.mod">
+  %learning-d-def;
+
+<!ENTITY % learningmeta-d-def
+  SYSTEM "learningMetadataDomain.mod">
+  %learningmeta-d-def;
+

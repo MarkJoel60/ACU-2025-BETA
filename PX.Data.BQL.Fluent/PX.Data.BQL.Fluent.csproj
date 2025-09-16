@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\tmp\2025 R2 DLLs\PX.Data.BQL.Fluent.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F48E0B1-75C5-4610-B085-E9C32CDF5C39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PX.Data.BQL.Fluent</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>PX.Data.BQL.Fluent</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FbqlCommand.cs" />
+    <Compile Include="FbqlCommandParser.cs" />
+    <Compile Include="FbqlParseResult.cs" />
+    <Compile Include="IFbqlJoin.cs" />
+    <Compile Include="FbqlJoins.cs" />
+    <Compile Include="PXProcessingViewOf`1.cs" />
+    <Compile Include="PXViewOf`1.cs" />
+    <Compile Include="SelectFromBase`2.cs" />
+    <Compile Include="UpdateBase`3.cs" />
+    <Compile Include="By.cs" />
+    <Compile Include="By`1.cs" />
+    <Compile Include="By`2.cs" />
+    <Compile Include="By`3.cs" />
+    <Compile Include="By`4.cs" />
+    <Compile Include="By`5.cs" />
+    <Compile Include="By`6.cs" />
+    <Compile Include="By`7.cs" />
+    <Compile Include="By`8.cs" />
+    <Compile Include="By`9.cs" />
+    <Compile Include="By`10.cs" />
+    <Compile Include="By`11.cs" />
+    <Compile Include="By`12.cs" />
+    <Compile Include="By`13.cs" />
+    <Compile Include="By`14.cs" />
+    <Compile Include="By`15.cs" />
+    <Compile Include="By`16.cs" />
+    <Compile Include="By`17.cs" />
+    <Compile Include="By`18.cs" />
+    <Compile Include="By`19.cs" />
+    <Compile Include="By`20.cs" />
+    <Compile Include="By`21.cs" />
+    <Compile Include="By`22.cs" />
+    <Compile Include="By`23.cs" />
+    <Compile Include="By`24.cs" />
+    <Compile Include="By`25.cs" />
+    <Compile Include="By`26.cs" />
+    <Compile Include="By`27.cs" />
+    <Compile Include="By`28.cs" />
+    <Compile Include="By`29.cs" />
+    <Compile Include="By`30.cs" />
+    <Compile Include="By`31.cs" />
+    <Compile Include="By`32.cs" />
+    <Compile Include="To.cs" />
+    <Compile Include="To`1.cs" />
+    <Compile Include="To`2.cs" />
+    <Compile Include="To`3.cs" />
+    <Compile Include="To`4.cs" />
+    <Compile Include="To`5.cs" />
+    <Compile Include="To`6.cs" />
+    <Compile Include="To`7.cs" />
+    <Compile Include="To`8.cs" />
+    <Compile Include="To`9.cs" />
+    <Compile Include="To`10.cs" />
+    <Compile Include="To`11.cs" />
+    <Compile Include="To`12.cs" />
+    <Compile Include="To`13.cs" />
+    <Compile Include="To`14.cs" />
+    <Compile Include="To`15.cs" />
+    <Compile Include="To`16.cs" />
+    <Compile Include="To`17.cs" />
+    <Compile Include="To`18.cs" />
+    <Compile Include="To`19.cs" />
+    <Compile Include="To`20.cs" />
+    <Compile Include="To`21.cs" />
+    <Compile Include="To`22.cs" />
+    <Compile Include="To`23.cs" />
+    <Compile Include="To`24.cs" />
+    <Compile Include="To`25.cs" />
+    <Compile Include="To`26.cs" />
+    <Compile Include="To`27.cs" />
+    <Compile Include="To`28.cs" />
+    <Compile Include="To`29.cs" />
+    <Compile Include="To`30.cs" />
+    <Compile Include="To`31.cs" />
+    <Compile Include="To`32.cs" />
+    <Compile Include="FbqlSearch`1.cs" />
+    <Compile Include="SearchFor`1.cs" />
+    <Compile Include="IFbqlSelect`1.cs" />
+    <Compile Include="FbqlSelect`2.cs" />
+    <Compile Include="FbqlSelect`7.cs" />
+    <Compile Include="SelectFrom`1.cs" />
+    <Compile Include="SelectFrom`2.cs" />
+    <Compile Include="SelectFromMirror`2.cs" />
+    <Compile Include="FbqlUpdateBase`6.cs" />
+    <Compile Include="Update`1.cs" />
+    <Compile Include="UpdateSet`2.cs" />
+    <Compile Include="UpdateSetMirror`2.cs" />
+    <Compile Include="Update`3.cs" />
+    <Compile Include="UpdateMirror`3.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

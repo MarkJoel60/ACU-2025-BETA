@@ -1,0 +1,17 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: PX.Api.PXSYFilterRow
+// Assembly: PX.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+// MVID: 2A82D21C-DAFC-4371-ACE9-BAD417AC5A62
+// Assembly location: D:\tmp\2025 R2 DLLs\PX.Data.dll
+// XML documentation location: D:\tmp\2025 R2 DLLs\PX.Data.xml
+
+using PX.Data;
+
+#nullable disable
+namespace PX.Api;
+
+public class PXSYFilterRow(string dataField, PXCondition condition, object value, object value2) : 
+  PXFilterRow(dataField, condition, value, value2)
+{
+  public System.Type DataFieldType { get; set; }
+}
